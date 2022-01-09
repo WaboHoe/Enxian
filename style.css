@@ -1,0 +1,427 @@
+*{
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+    margin:0;
+    padding:0;  
+}
+body{
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
+}
+
+header{
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-between; 
+
+
+}
+
+header .logo{
+    width:100%;
+    margin:15px;
+    background-image: url('src/ENXIAN_LOGO.png');
+    background-repeat: no-repeat;
+}
+
+header .mainMenu{
+    display:flex;
+    list-style:none;
+}
+
+header .mainMenu li a{
+    display:inline-block;
+    font-family: 'Lora', serif;
+    padding:20px;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:white;
+    font-size:30px;
+}
+header .mainMenu li a:hover{
+    letter-spacing: 5px;
+    transition: 1.5s;
+}
+header .openMenu{
+    font-size:30px;
+    color:whitesmoke;
+    margin:20px;
+    display:none;
+    cursor:pointer;
+}
+header .mainMenu .closeMenu, .icons i{
+    font-size:2rem;
+    display:none;
+    cursor:pointer;
+}
+
+.loop{
+    position: absolute;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:150px;
+    width:100%;
+    height:500px;
+    /*background-color: darkblue;*/
+}
+
+.loop:before{
+    content:'God may work in light, but we mortals work in pigment.';
+    color:white;
+    font-family: 'Lora', serif;
+    font-size: 55px;
+    font-weight: 500;
+    animation:changing1 infinite 30s;
+    text-shadow: 0px 0px 12px rgba(255,255,255,0.7);
+
+
+}
+
+@keyframes changing1{
+    0%{
+        content:'God may work in light, but we mortals work in pigment. ';
+        color:red;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 5s;
+    }
+    20%{
+        content:'God may work in light, but we mortals work in pigment.';
+        color:yellow;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 5s;
+    }
+    40%{
+        content:'Separation penetrates the disappearing person like a pigment and steeps him in gentle radiance. ';
+        color:green;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 5s;
+        
+    }
+    60%{
+        content:'Separation penetrates the disappearing person like a pigment and steeps him in gentle radiance. ';
+        color:blue;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 5s;
+       
+    }
+    80%{
+        content:'Colour is as variable and evanescent in the form of pigment as in visible nature.';
+        color:violet;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 5s;
+
+    }
+    100%{
+        content:'Colour is as variable and evanescent in the form of pigment as in visible nature.';
+        color:brown;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 5s;
+
+    }
+    
+    
+}
+
+
+
+.btn{
+    position: absolute;
+    top:555px;
+    font-size:15px;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg,#ec9f05  0%,  #ff4e0074 100%);
+    margin-left:42%;
+    display:inline-block;
+    padding:10px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+
+
+
+
+.vertical-slide-show{
+    width:100%;
+    height:600px;
+
+}
+.mySlides img {
+    height:600px;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left,black,brown,purple,violet,green,blue,orange,yellow,red);
+}
+
+
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top:25px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+} 
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: grey
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.history{
+    color:whitesmoke;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.simple-ela .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.simple-ela .content .box{
+    width:350px;
+    height:350px;
+    margin:30px; 
+    border:5px;
+    padding:30px;
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.849) 0px 4px 8px -2px, rgb(255, 255, 255) 0px 0px 0px 1px;
+    color:black;
+}
+.Text img{
+    padding-left:0;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.Text h5{
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    padding:5px;
+    text-align: center;
+}
+
+.simple-ela .content .box:hover{
+    background-color:violet;
+    color:black;
+    transition: 1.5s;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.D_text{
+    color:white;
+    margin:30px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 6px;
+    font-size: 35px;
+    text-shadow: 0px 3px 0px #b2a98f,
+    0px 14px 10px rgba(0,0,0,0.15),
+    0px 24px 2px rgba(0,0,0,0.1),
+    0px 34px 30px rgba(0,0,0,0.1);
+}
+
+.Products{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    min-height:10px;
+
+}
+
+.container_P{
+    position: relative;
+    max-width:100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows:minmax(100px,auto);
+    margin:40px;
+    grid-auto-flow:dense;
+    grid-gap:10px;
+}
+
+.container_P .box_P{
+    background: #333;
+    display:grid;
+    font-size:20px;
+    place-items:center;
+    text-align:center;
+    transition:0.5s;
+}
+.box_P img:hover{
+    opacity: 0.5;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.container_P .box_P:nth-child(1){
+   grid-column:span 1;
+   grid-row:span 2;
+}
+
+.container_P .box_P:nth-child(2){
+    grid-column:span 2;
+    grid-row:span 1;
+}
+.container_P .box_P:nth-child(3){
+    grid-column:span 1;
+    grid-row:span 2;
+}
+.container_P .box_P:nth-child(6),:nth-child(7){
+    grid-column:span 2;
+    grid-row:span 1;
+}
+footer{
+    padding:20px;
+    font-size:px;
+}
+
+
+
+
+
+
+/*TODO: Media Width*/
+@media(max-width:880px){
+    header .mainMenu{
+        height:600px;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index:10;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background-image: linear-gradient( #a4508b, #5f0a87 74%);
+        transition:top 1s ease;
+        display:none;
+
+    }
+    header .mainMenu .closeMenu{
+        display:block;
+        position:absolute;
+        top:20px;
+        right:20px;
+    }
+    header .openMenu{
+        display:block;
+    }
+    .icons i{
+        display:inline-block;
+        padding:12px;
+    }
+    .loop{
+       
+        padding:30px;
+    }
+    .loop:before{
+        font-size: 40px;
+    }
+    .btn{
+        margin-left:35%;
+    }
+    .vertical-slide-show .prev{
+        display:none;
+    }
+    .vertical-slide-show .next{
+        display:none;
+    }
+
+
+
+}
+
+
+@media(max-width:400px){
+    .loop{
+        margin-top: 40px;
+
+    }
+    .btn{
+        margin-left:25%;
+    }
+
+    header .logo{
+        width:400px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
